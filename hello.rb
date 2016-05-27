@@ -1,2 +1,2 @@
 puts "Hello there, #{ARGV.first}!"
-// comment
+// this is a comment
