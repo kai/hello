@@ -8,8 +8,8 @@ on('issues.labeled')
 
 on('issue_comment.opened')
   .filter((event) => event.issue.body.match(/^@probot assign @(\w+)$/))
-  .assign({{ matches[0] }})
+  .assign({{ matches[0] }});
 
 on('issue_comment.opened')
   .filter((event) => event.issue.body.match(/^@probot label @(\w+)$/))
-  .label($1)
+  .label($1);
