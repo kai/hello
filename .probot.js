@@ -3,7 +3,7 @@
 //  .comment('Thanks for your comment')
 
 on('issue_comment.opened')
-  .filter((event) => event.issue.body.match(/Can I have some feedback, please?/))
+  .filter((event) => event.issue.body.match(/^Can I have some feedback, please\?$/))
   .comment(':+1: Looks great! :shipit:')
 
 //on('issue_comment.opened')
