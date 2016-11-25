@@ -7,9 +7,9 @@ on('issues.labeled')
   .comment('Hey there, the `enhancement` label was added')
 
 on('issue_comment.opened')
-  .filter((event) => event.issue.body.match(/^@peter-robot assign @(\w+)$/))
-  .assign({{ matches[0] }});
+  .filter((event) => event.issue.body.match(/^@probot assign @(\w+)$/))
+  .assign({{ matches[0] }})
 
 on('issue_comment.opened')
-  .filter((event) => event.issue.body.match(/^@peter-robot label @(\w+)$/))
-  .label($1);
+  .filter((event) => event.issue.body.match(/^@probot label @(\w+)$/))
+  .label($1)
