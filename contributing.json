@@ -1,4 +1,4 @@
-// https://gitmagic.io/rules
+// https://gitmagic.io/rules sss
 {
   "commit": {
     "subject_cannot_be_empty": true,
